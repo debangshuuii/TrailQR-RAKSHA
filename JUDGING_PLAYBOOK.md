@@ -2,7 +2,7 @@
 
 > **Event:** Hacktoberfest Hack Day × OWASP JIS University  
 > **Team:** Team Raksha (Sudipta Sanki, Soumyabrata Mukherjee, Debangshu Sinha — Techno Main Salt Lake)  
-> **Project:** [TrailQR Raksha](https://github.com/debangshuuii/QR-RAKSHA)  
+> **Project:** [TrailQR Raksha](https://github.com/debangshuuii/TrailQR-RAKSHA)  
 > **Golden Rule for Judges:** *"Your pitch gets our attention. Your implementation earns it."*
 
 ---

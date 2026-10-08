@@ -42,4 +42,4 @@ Kolkata — and India — runs on QR codes. Tea stalls, taxis, parking, donation
 - Soumyabrata Mukherjee — AI Integration & Gemma Explanations
 - Debangshu Sinha — Full-Stack Interface, Registry & Snowflake
 
-MIT Licensed: https://github.com/debangshuuii/QR-RAKSHA
+MIT Licensed: https://github.com/debangshuuii/TrailQR-RAKSHA

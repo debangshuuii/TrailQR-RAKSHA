@@ -1,7 +1,7 @@
 # 📝 Official Hackathon Submission Form
 
 > **Event:** Hacktoberfest Hack Day × OWASP JIS University  
-> **Repository:** [https://github.com/debangshuuii/QR-RAKSHA](https://github.com/debangshuuii/QR-RAKSHA)  
+> **Repository:** [https://github.com/debangshuuii/TrailQR-RAKSHA](https://github.com/debangshuuii/TrailQR-RAKSHA)  
 > **License:** MIT License (Permissive Open-Source)
 
 ---
@@ -39,7 +39,7 @@
 ---
 
 ### 6. GitHub Repository
-**[https://github.com/debangshuuii/QR-RAKSHA](https://github.com/debangshuuii/QR-RAKSHA)** (Public, MIT Licensed)
+**[https://github.com/debangshuuii/TrailQR-RAKSHA](https://github.com/debangshuuii/TrailQR-RAKSHA)** (Public, MIT Licensed)
 
 ### 7. Demo URL & Running Instructions
 * **Local Web Demo:** Run locally via `http://localhost:8000` (or double-click `index.html` in any browser — zero build steps, zero npm installs required).
@@ -84,7 +84,7 @@
 ## 🎯 Submission Readiness Checklist
 - [x] All 10 required submission fields filled out completely.
 - [x] README contains all minimum sections (problem, setup, run instructions, stack, AI models, limitations).
-- [x] Public GitHub repo configured at `https://github.com/debangshuuii/QR-RAKSHA` with MIT license.
+- [x] Public GitHub repo configured at `https://github.com/debangshuuii/TrailQR-RAKSHA` with MIT license.
 - [x] Open-weight AI (Gemma 4) clearly documented with exact role and boundary.
 - [x] `SKILLS.md` included documenting AI tools, workflows, Agent Skill, and Model Harness.
 - [x] 8/8 automated test assertions pass (`node --test tests/rules.test.mjs`).

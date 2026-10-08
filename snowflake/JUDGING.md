@@ -48,9 +48,9 @@
 
 ### ❓ Question 4: "Is this published in a public GitHub repository with an open-source license?"
 **Your 10-Second Answer:**
-> *"Yes, the entire project is open-source under the **MIT License** and publicly hosted on GitHub at `https://github.com/debangshuuii/QR-RAKSHA`."*
+> *"Yes, the entire project is open-source under the **MIT License** and publicly hosted on GitHub at `https://github.com/debangshuuii/TrailQR-RAKSHA`."*
 
-* **Repository:** [https://github.com/debangshuuii/QR-RAKSHA](https://github.com/debangshuuii/QR-RAKSHA)
+* **Repository:** [https://github.com/debangshuuii/TrailQR-RAKSHA](https://github.com/debangshuuii/TrailQR-RAKSHA)
 * **License File:** [`LICENSE`](../LICENSE) (MIT)
 * **Automated Tests:** 7/7 passing unit tests (`node --test tests/rules.test.mjs`)
 

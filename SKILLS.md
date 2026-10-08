@@ -1,6 +1,6 @@
 # 🧠 AI Tools, Models & Agent Skills Documentation (`SKILLS.md`)
 
-> **Project:** [TrailQR Raksha](https://github.com/debangshuuii/QR-RAKSHA)  
+> **Project:** [TrailQR Raksha](https://github.com/debangshuuii/TrailQR-RAKSHA)  
 > **Repository:** Public Open-Source under MIT License  
 > **Documentation Scope:** Compliance with MLH Submission Requirements for AI Tools, Models, Workflows, Agent Skills, and Model Harnesses.
 

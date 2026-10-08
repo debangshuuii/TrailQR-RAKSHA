@@ -42,7 +42,7 @@
   *"Google Gemma 4 consumes Snowflake's `V_GEMMA_AI_NEIGHBOURHOOD_BRIEF` risk tiers to generate plain-language English and Bengali threat advisories for citizens."*
 
 * **If asked about license and repo:**
-  *"100% open-source under the MIT License, public at `https://github.com/debangshuuii/QR-RAKSHA` with 7 automated unit tests passing."*
+  *"100% open-source under the MIT License, public at `https://github.com/debangshuuii/TrailQR-RAKSHA` with 7 automated unit tests passing."*
 
 ---
 

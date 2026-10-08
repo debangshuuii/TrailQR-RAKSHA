@@ -348,13 +348,13 @@
         </div>
 
         <div class="map-basemap-bar">
-          <span class="basemap-label">Basemap:</span>
+          <span class="basemap-label" data-i18n="basemapLabel">Basemap View:</span>
           <div class="basemap-btn-group">
-            <button type="button" class="micro-btn basemap-btn active" data-basemap="dark">🌑 Dark</button>
-            <button type="button" class="micro-btn basemap-btn" data-basemap="streets">🗺️ Streets</button>
-            <button type="button" class="micro-btn basemap-btn" data-basemap="satellite">🛰️ Satellite</button>
+            <button type="button" class="micro-btn basemap-btn active" data-basemap="dark" data-i18n="basemapDark">🌑 Dark Canvas</button>
+            <button type="button" class="micro-btn basemap-btn" data-basemap="streets" data-i18n="basemapStreets">🗺️ Street Map</button>
+            <button type="button" class="micro-btn basemap-btn highlight-satellite" data-basemap="satellite" data-i18n="basemapSatellite">🛰️ Satellite Hybrid</button>
           </div>
-          <span class="basemap-hint">Old Dark canvas kept as default — switch anytime, pins stay.</span>
+          <span class="basemap-hint" data-i18n="basemapHint">Toggle High-Resolution Satellite Imagery with road & neighborhood overlays anytime.</span>
         </div>
 
         <!-- Live Location & Nearby Scanned Details Card -->
@@ -620,7 +620,7 @@ FROM TRAILQR.REGISTRY.V_FRAUD_HOTSPOTS_BY_AREA h;</code></pre>
             <h3>📜 Open-Source Compliance & Links</h3>
             <ul class="about-list">
               <li><strong>License:</strong> MIT Open-Source License (<a href="LICENSE" target="_blank">LICENSE</a>)</li>
-              <li><strong>Repository:</strong> <a href="https://github.com/debangshuuii/QR-RAKSHA" target="_blank" rel="noopener">github.com/debangshuuii/QR-RAKSHA</a></li>
+              <li><strong>Repository:</strong> <a href="https://github.com/debangshuuii/TrailQR-RAKSHA" target="_blank" rel="noopener">github.com/debangshuuii/TrailQR-RAKSHA</a></li>
               <li><strong>Automated Tests:</strong> 8/8 test assertions passing (`node --test tests/rules.test.mjs`)</li>
             </ul>
           </div>

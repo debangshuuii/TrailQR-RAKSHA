@@ -1,6 +1,6 @@
 # 🛡️ Challenge Tracks Verification Dossier & Stand Proof
 
-> **Project:** [TrailQR Raksha](https://github.com/debangshuuii/QR-RAKSHA)  
+> **Project:** [TrailQR Raksha](https://github.com/debangshuuii/TrailQR-RAKSHA)  
 > **Event:** Hacktoberfest Hack Day × OWASP JIS University  
 > **Team:** Team Raksha (Sudipta Sanki, Soumyabrata Mukherjee, Debangshu Sinha — Techno Main Salt Lake)  
 > **License:** MIT License (Permissive Open-Source)  
@@ -28,7 +28,7 @@
 * **Evidence File:** [`js/gemma.js`](js/gemma.js)
 
 #### Requirement 1.2: Published in a public GitHub repository and use an open-source license.
-* **Proof:** Publicly hosted at [https://github.com/debangshuuii/QR-RAKSHA](https://github.com/debangshuuii/QR-RAKSHA) under the MIT License.
+* **Proof:** Publicly hosted at [https://github.com/debangshuuii/TrailQR-RAKSHA](https://github.com/debangshuuii/TrailQR-RAKSHA) under the MIT License.
 * **Evidence File:** [`LICENSE`](LICENSE)
 
 #### Requirement 1.3: An agent skill must comply with the Agent Skill Open Standard.

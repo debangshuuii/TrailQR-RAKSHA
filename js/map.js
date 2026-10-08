@@ -98,7 +98,7 @@
         scrollWheelZoom: false
       });
 
-      // --- Basemaps: Dark (default) + Streets + Satellite (all Esri, keyless) ---
+      // --- Basemaps: Dark Canvas (default) + Street Map + High-Res Satellite Hybrid (all Esri, keyless) ---
       var darkBase = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
         attribution: 'Tiles &copy; Esri, DeLorme, NAVTEQ',
         maxNativeZoom: 16,
@@ -118,32 +118,74 @@
         maxZoom: 19
       });
 
+      // High-resolution Earth observation satellite imagery
       var satelliteBase = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
         attribution: 'Imagery &copy; Esri, Maxar, Earthstar Geographics',
         maxNativeZoom: 19,
-        maxZoom: 19
+        maxZoom: 20
       });
 
-      // Place / boundary labels overlay so Satellite stays readable
+      // Transportation & street network overlay for Satellite
+      var satelliteRoads = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}", {
+        attribution: '',
+        maxNativeZoom: 19,
+        maxZoom: 20
+      });
+
+      // Place, landmark & administrative boundary labels overlay for Satellite
       var satelliteLabels = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", {
         attribution: '',
         maxNativeZoom: 19,
-        maxZoom: 19
+        maxZoom: 20
       });
 
       baseLayers.dark = L.layerGroup([darkBase, darkLabels]);
       baseLayers.streets = L.layerGroup([streetBase]);
-      baseLayers.satellite = L.layerGroup([satelliteBase, satelliteLabels]);
+      baseLayers.satellite = L.layerGroup([satelliteBase, satelliteRoads, satelliteLabels]);
 
-      baseLayers.dark.addTo(mapInstance);
-      currentBasemap = "dark";
+      // Activate selected basemap (respect existing selection, default to dark)
+      var activeBasemap = currentBasemap && baseLayers[currentBasemap] ? currentBasemap : "dark";
+      baseLayers[activeBasemap].addTo(mapInstance);
+      currentBasemap = activeBasemap;
+      syncBasemapButtons();
 
-      // Built-in Leaflet switcher (top-right) + custom buttons call the same setBasemap()
+      // Built-in Leaflet switcher (top-right)
       layerControl = L.control.layers({
-        "Dark Canvas": baseLayers.dark,
-        "Streets": baseLayers.streets,
-        "Satellite": baseLayers.satellite
+        "🌑 Dark Canvas": baseLayers.dark,
+        "🗺️ Street Map": baseLayers.streets,
+        "🛰️ Satellite Hybrid": baseLayers.satellite
       }, null, { position: "topright" }).addTo(mapInstance);
+
+      // Listen for Leaflet baselayer change events
+      mapInstance.on("baselayerchange", function (e) {
+        if (e.layer === baseLayers.dark) currentBasemap = "dark";
+        else if (e.layer === baseLayers.streets) currentBasemap = "streets";
+        else if (e.layer === baseLayers.satellite) currentBasemap = "satellite";
+        syncBasemapButtons();
+      });
+
+      // Floating On-Map Quick Satellite Toggle Control (top-left below zoom)
+      var SatelliteMapControl = L.Control.extend({
+        options: { position: "topleft" },
+        onAdd: function () {
+          var btn = L.DomUtil.create("button", "leaflet-bar leaflet-satellite-toggle-btn");
+          btn.type = "button";
+          btn.title = "Toggle High-Resolution Satellite View";
+          btn.innerHTML = currentBasemap === "satellite" ? "🌑 Dark Canvas" : "🛰️ Satellite View";
+          if (currentBasemap === "satellite") btn.classList.add("satellite-active");
+          L.DomEvent.disableClickPropagation(btn);
+          L.DomEvent.on(btn, "click", function (e) {
+            L.DomEvent.stop(e);
+            if (currentBasemap === "satellite") {
+              setBasemap("dark");
+            } else {
+              setBasemap("satellite");
+            }
+          });
+          return btn;
+        }
+      });
+      new SatelliteMapControl().addTo(mapInstance);
 
       markersLayer = L.layerGroup().addTo(mapInstance);
 
@@ -292,12 +334,13 @@
       syncBasemapButtons();
       return;
     }
-    if (currentBasemap && baseLayers[currentBasemap]) {
+    if (currentBasemap && baseLayers[currentBasemap] && mapInstance.hasLayer(baseLayers[currentBasemap])) {
       mapInstance.removeLayer(baseLayers[currentBasemap]);
     }
     baseLayers[name].addTo(mapInstance);
     // Keep scan pins + live user pin above the new basemap
     if (markersLayer) markersLayer.bringToFront();
+    if (userMarker) userMarker.bringToFront();
     currentBasemap = name;
     syncBasemapButtons();
   }
@@ -311,6 +354,17 @@
     btns.forEach(function (b) {
       b.classList.toggle("active", b.getAttribute("data-basemap") === currentBasemap);
     });
+
+    var mapToggle = document.querySelector(".leaflet-satellite-toggle-btn");
+    if (mapToggle) {
+      if (currentBasemap === "satellite") {
+        mapToggle.innerHTML = "🌑 Dark Canvas";
+        mapToggle.classList.add("satellite-active");
+      } else {
+        mapToggle.innerHTML = "🛰️ Satellite View";
+        mapToggle.classList.remove("satellite-active");
+      }
+    }
   }
 
   function panToLocality(query) {

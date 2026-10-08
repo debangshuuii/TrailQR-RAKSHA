@@ -1430,6 +1430,107 @@ video {
 .map-popup-advisory.dangerous { border-left: 3px solid var(--signal-danger); }
 .map-popup-advisory.safe { border-left: 3px solid var(--signal-safe); }
 
+/* On-Map Floating Satellite Toggle Button */
+.leaflet-satellite-toggle-btn {
+  background: rgba(22, 27, 34, 0.92) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-medium) !important;
+  padding: 5px 11px !important;
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  transition: all 0.15s ease !important;
+  margin-top: 8px !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.leaflet-satellite-toggle-btn:hover {
+  background: var(--bg-hover) !important;
+  border-color: var(--text-primary) !important;
+}
+
+.leaflet-satellite-toggle-btn.satellite-active {
+  background: rgba(30, 58, 138, 0.95) !important;
+  color: #93c5fd !important;
+  border-color: #60a5fa !important;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.45) !important;
+}
+
+/* Custom Leaflet Controls in Dark Theme */
+.leaflet-bar {
+  border: 1px solid var(--border-medium) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  border-radius: var(--radius-sm) !important;
+  overflow: hidden;
+}
+
+.leaflet-bar a {
+  background-color: rgba(22, 27, 34, 0.92) !important;
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border-hairline) !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: var(--bg-hover) !important;
+  color: #ffffff !important;
+}
+
+.leaflet-control-layers {
+  background: rgba(18, 22, 30, 0.94) !important;
+  border: 1px solid var(--border-medium) !important;
+  border-radius: var(--radius-md) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 12px !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+.leaflet-control-layers-toggle {
+  background-color: rgba(22, 27, 34, 0.92) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+.leaflet-control-layers-expanded {
+  padding: 8px 12px !important;
+}
+
+.leaflet-control-layers-base label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin: 5px 0 !important;
+  cursor: pointer !important;
+  color: var(--text-secondary) !important;
+  font-weight: 500 !important;
+}
+
+.leaflet-control-layers-base label:hover {
+  color: var(--text-primary) !important;
+}
+
+.highlight-satellite {
+  border-color: rgba(59, 130, 246, 0.5) !important;
+  color: #93c5fd !important;
+}
+
+.highlight-satellite:hover {
+  border-color: #3b82f6 !important;
+  background: rgba(30, 58, 138, 0.4) !important;
+}
+
+.highlight-satellite.active {
+  background: rgba(30, 58, 138, 0.9) !important;
+  color: #ffffff !important;
+  border-color: #60a5fa !important;
+}
+
 /* ========================================================================== */
 /* COMMUNITY REGISTRY TABLE                                                   */
 /* ========================================================================== */

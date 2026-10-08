@@ -1,7 +1,7 @@
 # Snowflake Cortex Code (CoCo) & Dataset Integration Guide
 
 > **MLH Challenge Category:** Best Open-Source AI Project with Snowflake  
-> **Project:** [TrailQR Raksha](https://github.com/debangshuuii/QR-RAKSHA) — Offline-First Street QR Fraud Defense  
+> **Project:** [TrailQR Raksha](https://github.com/debangshuuii/TrailQR-RAKSHA) — Offline-First Street QR Fraud Defense  
 > **Eligible Elements Combined:**  
 > 1. ❄️ **Snowflake CoCo (Cortex Code):** AI coding agent for discovery, schema analysis, query generation, and data pipelines  
 > 2. 🌐 **Freely Accessible Snowflake Dataset:** *Cybersyn: Point of Interest & Business Open Data* (Snowflake Marketplace) + *SNOWFLAKE_SAMPLE_DATA*  

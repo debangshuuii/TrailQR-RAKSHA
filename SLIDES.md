@@ -16,7 +16,7 @@
   - Sudipta Sanki (2nd Year CSE, Techno Main Salt Lake)
   - Soumyabrata Mukherjee (2nd Year CSE, Techno Main Salt Lake)
   - Debangshu Sinha (2nd Year CSE, Techno Main Salt Lake)
-* **GitHub Repository:** [https://github.com/debangshuuii/QR-RAKSHA](https://github.com/debangshuuii/QR-RAKSHA) (MIT Licensed)
+* **GitHub Repository:** [https://github.com/debangshuuii/TrailQR-RAKSHA](https://github.com/debangshuuii/TrailQR-RAKSHA) (MIT Licensed)
 
 > **Speaker Notes:**  
 > *"Good morning judges! India runs on QR codes. One sticker pasted over a shop's real QR and your money goes to a fraudster. We built TrailQR Raksha: deterministic rules decide, Google Gemma 4 explains, and Snowflake CoCo aggregates neighborhood threat intelligence using the Cybersyn Marketplace dataset."*
@@ -91,7 +91,7 @@
   - ⚡ **Zero Dependencies:** Runs directly in any modern browser (`index.html`) or via `http://localhost:8000`.
   - 🛡️ **Tested & Proven:** 7 automated test assertions passing (`node --test tests/rules.test.mjs`).
   - ❄️ **Interactive Snowflake Panel:** Preload demo street telemetry and view live hotspot statistics and Cybersyn POI anomaly matches.
-  - 🌐 **100% Open Source:** MIT License on GitHub at [debangshuuii/QR-RAKSHA](https://github.com/debangshuuii/QR-RAKSHA).
+  - 🌐 **100% Open Source:** MIT License on GitHub at [debangshuuii/TrailQR-RAKSHA](https://github.com/debangshuuii/TrailQR-RAKSHA).
 * **Live Demo Flow:**
   1. Scan / Pick sample: `Sticker-swap UPI` ➔ `DANGEROUS 75/100`.
   2. Gemma Vernacular Explanation: Bengali guidance (*"বিপদ — এই QR ব্যবহার করবেন না..."*).
